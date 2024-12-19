@@ -69,5 +69,5 @@
 </br>
 
 ## 📝 ERD
-<img src="https://github.com/user-attachments/assets/f715d33c-ba6a-4bd3-aec9-01c33491f0d7" width="700" height="400"/>
+![ERD](doc/img/erd.png)
 
