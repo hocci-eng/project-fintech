@@ -24,5 +24,5 @@ public class Account {
     private LocalDateTime unregisteredAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    private AccountUser user;
 }
