@@ -25,7 +25,7 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     private TransactionResultType transactionResultType;
 
-    private Long balance;
+    private Long amount;
     private Long balanceSnapshot;
     private String transactionId;
     private LocalDateTime transactedAt;
