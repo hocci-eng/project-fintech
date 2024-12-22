@@ -35,7 +35,7 @@ class AccountUserServiceTest {
     void 사용자_생성 () {
         // given
         AccountUserDto userToSave = new AccountUserDto(
-                "userid", "userpw", "유저1");
+                "userid", "userpw", "유저1", LocalDateTime.now());
 
         given(userRepository.save(any(AccountUser.class))).willReturn(
                 new AccountUser(
@@ -45,7 +45,8 @@ class AccountUserServiceTest {
         );
 
         // when
-        AccountUserDto savedUser = userService.createUser(userToSave);
+        AccountUserDto savedUser = userService.createUser(
+                userToSave.getUserId(), userToSave.getUserPw(), userToSave.getUserName());
 
         // then
         assertThat(savedUser).isNotNull();
